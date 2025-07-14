@@ -1,0 +1,164 @@
+/* ========================================
+   VARIABLES GLOBALES DE COLORES
+   ======================================== */
+:root {
+  --primary-color: #0d6efd; /* Azul principal de la marca */
+  --secondary-color: #6c757d; /* Gris para elementos secundarios */
+  --success-color: #198754; /* Verde para mensajes de éxito */
+  --warning-color: #ffc107; /* Amarillo para advertencias */
+  --danger-color: #dc3545; /* Rojo para errores */
+}
+
+/* ========================================
+   CONFIGURACIÓN BÁSICA DEL BODY
+   ======================================== */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ========================================
+   SECCIÓN HERO (PORTADA PRINCIPAL)
+   ======================================== */
+.hero-section {
+  /* Gradiente de fondo atractivo */
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh; /* Ocupa toda la pantalla */
+  display: flex;
+  align-items: center; /* Centra el contenido verticalmente */
+  padding-top: 76px; /* Espacio para el navbar fijo */
+}
+
+/* ========================================
+   TARJETAS DE PRODUCTOS
+   ======================================== */
+.product-card {
+  /* Transiciones suaves para animaciones */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  overflow: hidden; /* Evita que las imágenes se salgan */
+}
+
+/* Efecto hover en las tarjetas */
+.product-card:hover {
+  transform: translateY(-5px); /* Se eleva ligeramente */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Imágenes de los productos */
+.product-card .card-img-top {
+  height: 250px; /* Altura fija para uniformidad */
+  object-fit: cover; /* Mantiene proporción sin distorsión */
+  transition: transform 0.3s ease;
+}
+
+/* Efecto zoom en las imágenes al hacer hover */
+.product-card:hover .card-img-top {
+  transform: scale(1.05); /* Zoom sutil del 5% */
+}
+
+/* ========================================
+   TARJETAS DE CARACTERÍSTICAS
+   ======================================== */
+.feature-card {
+  padding: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px); /* Mismo efecto de elevación */
+}
+
+/* ========================================
+   BARRA DE NAVEGACIÓN
+   ======================================== */
+.navbar-brand {
+  font-size: 1.5rem; /* Tamaño del logo/marca */
+}
+
+/* ========================================
+   BOTONES PERSONALIZADOS
+   ======================================== */
+.btn {
+  border-radius: 8px; /* Bordes redondeados */
+  font-weight: 500; /* Texto semi-bold */
+  transition: all 0.3s ease; /* Transición suave */
+}
+
+.btn:hover {
+  transform: translateY(-2px); /* Efecto de elevación menor */
+}
+
+/* ========================================
+   TARJETAS GENERALES
+   ======================================== */
+.card {
+  border-radius: 12px; /* Bordes más redondeados */
+  border: none; /* Sin borde por defecto */
+}
+
+/* ========================================
+   BADGES/ETIQUETAS
+   ======================================== */
+.badge {
+  font-size: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN (MÓVILES)
+   ======================================== */
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: 100px; /* Más espacio en móvil */
+    text-align: center; /* Texto centrado */
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem; /* Título más pequeño */
+  }
+
+  .display-5 {
+    font-size: 2rem; /* Ajuste de tamaños */
+  }
+}
+
+/* ========================================
+   ANIMACIÓN DE CARGA
+   ======================================== */
+.loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%; /* Círculo perfecto */
+  border-top-color: #fff; /* Color del indicador */
+  animation: spin 1s ease-in-out infinite;
+}
+
+/* Keyframe para la rotación */
+@keyframes spin {
+  to {
+    transform: rotate(360deg); /* Giro completo */
+  }
+}
+
+/* ========================================
+   SCROLLBAR PERSONALIZADA
+   ======================================== */
+::-webkit-scrollbar {
+  width: 8px; /* Ancho de la barra */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Fondo de la pista */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color); /* Color del thumb */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0056b3; /* Color más oscuro al hover */
+}
